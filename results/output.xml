@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240316 03:19:25.182" rpa="false" schemaversion="4">
+<suite id="s1" name="TestHomepage" source="C:\Users\petch\Desktop\QA Test NOC\TestHomepage.robot">
+<test id="s1-t1" name="Test Login" line="33">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url_nocnoc}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240316 03:19:25.379" level="INFO">Opening browser 'Chrome' to base url 'https://nocnoc.com/login'.</msg>
+<status status="PASS" starttime="20240316 03:19:25.378" endtime="20240316 03:19:27.543"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240316 03:19:27.544" endtime="20240316 03:19:27.666"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.body.style.zoom = '75%'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:19:27.667" level="INFO">Executing JavaScript:
+document.body.style.zoom = '75%'
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:19:27.666" endtime="20240316 03:19:27.673"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:29.675" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:27.674" endtime="20240316 03:19:29.675"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email_Pnumber_Input}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 03:19:29.676" level="INFO">Typing text 'petch24096666.sa@gmail.com' into text field 'xpath=//*[@id="email-phone"]'.</msg>
+<status status="PASS" starttime="20240316 03:19:29.675" endtime="20240316 03:19:29.765"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:31.767" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:29.766" endtime="20240316 03:19:31.767"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:19:31.768" level="INFO">Executing JavaScript:
+document.querySelector('.btn.btn-primary.big-btn').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:19:31.767" endtime="20240316 03:19:31.785"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:35.786" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:31.785" endtime="20240316 03:19:35.786"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Password_Input}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 03:19:35.787" level="INFO">Typing text 'test1234' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20240316 03:19:35.786" endtime="20240316 03:19:35.871"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:37.872" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:35.872" endtime="20240316 03:19:37.872"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:19:37.873" level="INFO">Executing JavaScript:
+document.querySelector('.btn.btn-primary.big-btn').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:19:37.872" endtime="20240316 03:19:37.882"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:39.882" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:37.882" endtime="20240316 03:19:39.882"/>
+</kw>
+<status status="PASS" starttime="20240316 03:19:25.377" endtime="20240316 03:19:39.882"/>
+</test>
+<test id="s1-t2" name="Test Element Homepage is Visible" line="46">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240316 03:19:39.886" level="INFO">${title} = NocNoc - ตลาดออนไลน์วัสดุและของแต่งบ้าน พร้อมติดตั้งครบวงจร</msg>
+<status status="PASS" starttime="20240316 03:19:39.883" endtime="20240316 03:19:39.887"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title}</arg>
+<arg>NocNoc - ตลาดออนไลน์วัสดุและของแต่งบ้าน พร้อมติดตั้งครบวงจร</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240316 03:19:39.887" endtime="20240316 03:19:39.887"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240316 03:19:39.887" endtime="20240316 03:19:39.959"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${element_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240316 03:19:40.024" level="INFO">Element 'xpath=//*' is displayed.</msg>
+<status status="PASS" starttime="20240316 03:19:39.960" endtime="20240316 03:19:40.024"/>
+</kw>
+<msg timestamp="20240316 03:19:40.024" level="INFO">${element_visible} = True</msg>
+<status status="PASS" starttime="20240316 03:19:39.960" endtime="20240316 03:19:40.024"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${element_visible}</arg>
+<arg>Log</arg>
+<arg>Element is visible</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Element is not visible</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>Element is visible</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240316 03:19:40.024" level="INFO">Element is visible</msg>
+<status status="PASS" starttime="20240316 03:19:40.024" endtime="20240316 03:19:40.024"/>
+</kw>
+<status status="PASS" starttime="20240316 03:19:40.024" endtime="20240316 03:19:40.024"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${path}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20240316 03:19:40.028" level="INFO">${path} = https://nocnoc.com/</msg>
+<status status="PASS" starttime="20240316 03:19:40.025" endtime="20240316 03:19:40.028"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${path}</arg>
+<arg>${url_nocnoc}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240316 03:19:40.028" endtime="20240316 03:19:40.028"/>
+</kw>
+<status status="PASS" starttime="20240316 03:19:39.882" endtime="20240316 03:19:40.028"/>
+</test>
+<test id="s1-t3" name="Test Change Language to Engish" line="55">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${Change_Languge_Button}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:19:40.029" level="INFO">Executing JavaScript:
+document.querySelector('button.choose-language').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:19:40.029" endtime="20240316 03:19:40.048"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:42.049" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:40.049" endtime="20240316 03:19:42.049"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${Change_to_en}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:19:42.050" level="INFO">Executing JavaScript:
+document.querySelector('ul.account-types li[value="en"]').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:19:42.049" endtime="20240316 03:19:42.182"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:45.182" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:42.182" endtime="20240316 03:19:45.182"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240316 03:19:45.187" level="INFO">${title} = NocNoc Online Shopping: Enjoy shopping with us!</msg>
+<status status="PASS" starttime="20240316 03:19:45.182" endtime="20240316 03:19:45.187"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title}</arg>
+<arg>NocNoc Online Shopping: Enjoy shopping with us!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240316 03:19:45.187" endtime="20240316 03:19:45.187"/>
+</kw>
+<status status="PASS" starttime="20240316 03:19:40.029" endtime="20240316 03:19:45.187"/>
+</test>
+<test id="s1-t4" name="Test Change Language to Thai" line="62">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${Change_Languge_Button}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:19:45.188" level="INFO">Executing JavaScript:
+document.querySelector('button.choose-language').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:19:45.188" endtime="20240316 03:19:45.205"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:47.206" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:45.205" endtime="20240316 03:19:47.206"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${Change_to_th}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:19:47.207" level="INFO">Executing JavaScript:
+document.querySelector('ul.account-types li[value="th"]').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:19:47.206" endtime="20240316 03:19:47.315"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:50.316" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:47.315" endtime="20240316 03:19:50.316"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240316 03:19:50.320" level="INFO">${title} = NocNoc - ตลาดออนไลน์วัสดุและของแต่งบ้าน พร้อมติดตั้งครบวงจร</msg>
+<status status="PASS" starttime="20240316 03:19:50.316" endtime="20240316 03:19:50.320"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${title}</arg>
+<arg>NocNoc - ตลาดออนไลน์วัสดุและของแต่งบ้าน พร้อมติดตั้งครบวงจร</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240316 03:19:50.321" endtime="20240316 03:19:50.321"/>
+</kw>
+<status status="PASS" starttime="20240316 03:19:45.188" endtime="20240316 03:19:50.321"/>
+</test>
+<test id="s1-t5" name="Test Promotion IMG path" line="69">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${Promotion_IMG}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:19:50.323" level="INFO">Executing JavaScript:
+document.querySelector('a.banner-img-link').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:19:50.322" endtime="20240316 03:19:50.354"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${path}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20240316 03:19:50.455" level="INFO">${path} = https://nocnoc.com/promotions/stpmarmidmonth?area=banner-home-main-banners&amp;pos=1</msg>
+<status status="PASS" starttime="20240316 03:19:50.355" endtime="20240316 03:19:50.456"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${path}</arg>
+<arg>https://nocnoc.com/promotions/</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240316 03:19:50.456" endtime="20240316 03:19:50.456"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:19:55.457" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:50.457" endtime="20240316 03:19:55.457"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${logo_click}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:19:55.458" level="INFO">Executing JavaScript:
+document.querySelector('img[src="/static/images/new_nocnoc_logo.svg?v=2"]').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:19:55.457" endtime="20240316 03:19:55.568"/>
+</kw>
+<status status="PASS" starttime="20240316 03:19:50.322" endtime="20240316 03:19:55.568"/>
+</test>
+<test id="s1-t6" name="Test NocNoc's-Choice" line="75">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:00.569" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240316 03:19:55.569" endtime="20240316 03:20:00.569"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${Click NocNoc's-Choice}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:20:00.570" level="INFO">Executing JavaScript:
+document.querySelector('a.sm-banner-img-link').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:20:00.569" endtime="20240316 03:20:00.617"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${path}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20240316 03:20:00.759" level="INFO">${path} = https://nocnoc.com/pl/NocNoc's-Choice?area=banner-nocnoc_choice_hotkey&amp;fq=stockStatus%3Aeq%3AIN_STOCK%7CLOW_STOCK%7CisMadeToOrder.code%7CCOMING_SOON.uc%2Ctag.code%3Aeq%3ANocNoc_Choice</msg>
+<status status="PASS" starttime="20240316 03:20:00.618" endtime="20240316 03:20:00.759"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${path}</arg>
+<arg>${NocNoc's-Choice_Path}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240316 03:20:00.759" endtime="20240316 03:20:00.759"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:03.760" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:00.760" endtime="20240316 03:20:03.760"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title_name}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240316 03:20:03.764" level="INFO">${title_name} = NocNoc's-Choice Category - NocNoc - ตลาดออนไลน์วัสดุและของแต่งบ้าน พร้อมติดตั้งครบวงจร - NocNoc</msg>
+<status status="PASS" starttime="20240316 03:20:03.760" endtime="20240316 03:20:03.764"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title_name}</arg>
+<arg>NocNoc's-Choice Category - NocNoc - ตลาดออนไลน์วัสดุและของแต่งบ้าน พร้อมติดตั้งครบวงจร - NocNoc</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240316 03:20:03.764" endtime="20240316 03:20:03.764"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:06.764" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:03.764" endtime="20240316 03:20:06.764"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${logoclick}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:20:06.765" level="INFO">Executing JavaScript:
+document.querySelector('img[src="/static/images/new_nocnoc_logo.svg?v=2"]').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:20:06.764" endtime="20240316 03:20:06.798"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:09.800" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:06.799" endtime="20240316 03:20:09.800"/>
+</kw>
+<status status="PASS" starttime="20240316 03:19:55.569" endtime="20240316 03:20:09.800"/>
+</test>
+<test id="s1-t7" name="Test Flash sale Promotion" line="86">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('img[src="https://cdn.nocnoc.com/campaign-assets/images/carousel-assets/logo-tab.png"]').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:20:09.801" level="INFO">Executing JavaScript:
+document.querySelector('img[src="https://cdn.nocnoc.com/campaign-assets/images/carousel-assets/logo-tab.png"]').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:20:09.801" endtime="20240316 03:20:10.144"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:13.144" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:10.144" endtime="20240316 03:20:13.144"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${path}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20240316 03:20:13.147" level="INFO">${path} = https://nocnoc.com/pl/Noc%20Flash%20Sale?fq=tag.code%3Aeq%3AFlashsale_16Mar&amp;isFlashSale=1</msg>
+<status status="PASS" starttime="20240316 03:20:13.144" endtime="20240316 03:20:13.147"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${path}</arg>
+<arg>${Flashsale_path}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240316 03:20:13.148" endtime="20240316 03:20:13.148"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:16.148" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:13.148" endtime="20240316 03:20:16.148"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title_name}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240316 03:20:16.152" level="INFO">${title_name} = Noc Flash Sale Category - NocNoc - ตลาดออนไลน์วัสดุและของแต่งบ้าน พร้อมติดตั้งครบวงจร - NocNoc</msg>
+<status status="PASS" starttime="20240316 03:20:16.148" endtime="20240316 03:20:16.152"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title_name}</arg>
+<arg>Noc Flash Sale Category - NocNoc - ตลาดออนไลน์วัสดุและของแต่งบ้าน พร้อมติดตั้งครบวงจร - NocNoc</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240316 03:20:16.152" endtime="20240316 03:20:16.152"/>
+</kw>
+<status status="PASS" starttime="20240316 03:20:09.801" endtime="20240316 03:20:16.152"/>
+</test>
+<test id="s1-t8" name="Test Filter in Flash Sale" line="94">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${filter_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 03:20:16.154" level="INFO">Clicking element 'xpath=//*[@id="filterAccordion"]/div[1]/div[2]/div/div[2]/div[1]/label'.</msg>
+<status status="PASS" starttime="20240316 03:20:16.154" endtime="20240316 03:20:16.236"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:19.236" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:16.236" endtime="20240316 03:20:19.236"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${filter}</var>
+<arg>${Category_result_span}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240316 03:20:19.255" level="INFO">${filter} = หมวดหมู่สินค้า: เครื่องใช้ไฟฟ้า </msg>
+<status status="PASS" starttime="20240316 03:20:19.236" endtime="20240316 03:20:19.255"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${filter}</arg>
+<arg>เครื่องใช้ไฟฟ้า</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240316 03:20:19.256" endtime="20240316 03:20:19.256"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${filter_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 03:20:19.256" level="INFO">Clicking element 'xpath=//*[@id="filterAccordion"]/div[1]/div[2]/div/div[2]/div[1]/label'.</msg>
+<status status="PASS" starttime="20240316 03:20:19.256" endtime="20240316 03:20:19.304"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${filter_2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 03:20:19.305" level="INFO">Clicking element 'xpath=//*[@id="filterAccordion"]/div[1]/div[2]/div/div[2]/div[2]/label'.</msg>
+<status status="PASS" starttime="20240316 03:20:19.304" endtime="20240316 03:20:19.378"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:22.380" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:19.379" endtime="20240316 03:20:22.380"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${filter}</var>
+<arg>${Category_result_span}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240316 03:20:22.392" level="INFO">${filter} = หมวดหมู่สินค้า: เครื่องออกกำลังกายและอุปกรณ์ </msg>
+<status status="PASS" starttime="20240316 03:20:22.380" endtime="20240316 03:20:22.392"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${filter}</arg>
+<arg>เครื่องออกกำลังกาย</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240316 03:20:22.392" endtime="20240316 03:20:22.392"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${logoclick}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:20:22.393" level="INFO">Executing JavaScript:
+document.querySelector('img[src="/static/images/new_nocnoc_logo.svg?v=2"]').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:20:22.392" endtime="20240316 03:20:22.396"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:27.397" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:22.396" endtime="20240316 03:20:27.397"/>
+</kw>
+<status status="PASS" starttime="20240316 03:20:16.153" endtime="20240316 03:20:27.397"/>
+</test>
+<test id="s1-t9" name="Test Search input" line="106">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${Search Box}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:20:27.399" level="INFO">Executing JavaScript:
+document.getElementById("search-suggestion-input").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:20:27.399" endtime="20240316 03:20:27.403"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Search input}</arg>
+<arg>พัดลม</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 03:20:27.404" level="INFO">Typing text 'พัดลม' into text field 'xpath=//*[@id="search-suggestion-input"]'.</msg>
+<status status="PASS" starttime="20240316 03:20:27.403" endtime="20240316 03:20:27.480"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${Search Button}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:20:27.481" level="INFO">Executing JavaScript:
+document.querySelector('button[name="searchButton"]').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:20:27.481" endtime="20240316 03:20:27.510"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:32.511" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:27.510" endtime="20240316 03:20:32.511"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Search_value}</var>
+<arg>${Search Text Result}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240316 03:20:32.526" level="INFO">${Search_value} = รายการสินค้า: "พัดลม"</msg>
+<status status="PASS" starttime="20240316 03:20:32.511" endtime="20240316 03:20:32.526"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${Search_value}</arg>
+<arg>รายการสินค้า: "พัดลม"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240316 03:20:32.526" endtime="20240316 03:20:32.526"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${logoclick}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:20:32.527" level="INFO">Executing JavaScript:
+document.querySelector('img[src="/static/images/new_nocnoc_logo.svg?v=2"]').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:20:32.526" endtime="20240316 03:20:32.529"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:35.529" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:32.529" endtime="20240316 03:20:35.529"/>
+</kw>
+<status status="PASS" starttime="20240316 03:20:27.398" endtime="20240316 03:20:35.529"/>
+</test>
+<test id="s1-t10" name="Test Click Product" line="115">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${Click NocNoc's-Choice}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:20:35.531" level="INFO">Executing JavaScript:
+document.querySelector('a.sm-banner-img-link').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:20:35.530" endtime="20240316 03:20:35.555"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:38.556" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:35.555" endtime="20240316 03:20:38.556"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${ExampleProduct}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240316 03:20:38.556" level="INFO">Executing JavaScript:
+document.querySelector('p.product-item-description').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240316 03:20:38.556" endtime="20240316 03:20:38.581"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 03:20:41.582" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240316 03:20:38.582" endtime="20240316 03:20:41.582"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${path}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20240316 03:20:41.585" level="INFO">${path} = https://nocnoc.com/pl/NocNoc's-Choice?area=banner-nocnoc_choice_hotkey&amp;fq=stockStatus%3Aeq%3AIN_STOCK%7CLOW_STOCK%7CisMadeToOrder.code%7CCOMING_SOON.uc%2Ctag.code%3Aeq%3ANocNoc_Choice</msg>
+<status status="PASS" starttime="20240316 03:20:41.582" endtime="20240316 03:20:41.585"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${path}</arg>
+<arg>https://nocnoc.com/pl/NocNoc's-Choice?area=banner-nocnoc_choice_hotkey</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20240316 03:20:41.586" endtime="20240316 03:20:41.586"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240316 03:20:41.586" endtime="20240316 03:20:43.786"/>
+</kw>
+<status status="PASS" starttime="20240316 03:20:35.530" endtime="20240316 03:20:43.786"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240316 03:20:43.788" endtime="20240316 03:20:43.788"/>
+</kw>
+<status status="PASS" starttime="20240316 03:19:25.184" endtime="20240316 03:20:43.788"/>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="10" fail="0" skip="0" id="s1" name="TestHomepage">TestHomepage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
