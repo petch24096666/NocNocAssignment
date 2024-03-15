@@ -7,7 +7,7 @@ Automate ตัวนี้ใช้เป็น Framework Robot
 
 ## Run
 
-To Run this project run this command in terminal at file floder
+To Run this project run this command in terminal at file folder
 
 ```bash
   robot TestHomepage.robot
